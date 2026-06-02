@@ -88,3 +88,39 @@ section h2::after {
   border-right: 3px solid;
   animation: blinkCursor 0.8s step-end infinite;
 }
+
+
+/* --- MOBILE RESPONSIVENESS --- */
+
+/* 1. Fix the typing text blue line glitch */
+#hero h2::after {
+  display: none !important;
+}
+
+/* 2. Mobile sizing rules */
+@media (max-width: 768px) {
+  /* Shrink hero text so it fits beautifully on one line */
+  #hero h2 {
+    font-size: 1.8rem !important;
+  }
+  
+  /* Hide standard navbar on mobile, show the hamburger button */
+  .desktop-nav {
+    display: none !important;
+  }
+  
+  .mobile-toggle-btn {
+    display: block !important;
+  }
+}
+
+/* Base style for the hamburger button (Hidden on desktop) */
+.mobile-toggle-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 5px;
+}
