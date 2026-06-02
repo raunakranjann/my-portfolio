@@ -1,111 +1,90 @@
-:root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+/* --- MODERN UI ACCENTS --- */
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
-
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
+/* 1. Ambient Background Blobs (Adds incredible depth behind your sections) */
+.ambient-blob-1 {
+  position: fixed;
+  top: 15%;
+  left: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0, 86, 179, 0.15) 0%, rgba(0,0,0,0) 70%);
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(40px);
+  pointer-events: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
-
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
+.ambient-blob-2 {
+  position: fixed;
+  bottom: 10%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(77, 163, 255, 0.12) 0%, rgba(0,0,0,0) 70%);
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(50px);
+  pointer-events: none;
 }
 
-body {
-  margin: 0;
+/* 2. Interactive Premium Cards (Glassmorphism + Smooth Lift Hover) */
+.design-card {
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
 }
 
-#root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
+.design-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 20px rgba(0, 86, 179, 0.15) !important;
+  border-color: #4da3ff !important;
 }
 
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
+/* 3. Global Section Spacing & Headings Design */
+section {
+  position: relative;
+  margin-top: 80px !important;
+  padding: 20px 0;
 }
 
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
-  }
-}
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
-}
-p {
-  margin: 0;
+section h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 30px;
+  display: inline-block;
+  position: relative;
 }
 
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
+/* Add a beautiful design underline bar below section titles */
+section h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 40px;
+  height: 4px;
+  background: #0056b3;
+  border-radius: 2px;
+  transition: width 0.3s ease;
 }
 
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
+.dark-mode-active section h2::after {
+  background: #4da3ff;
+}
+
+/* --- TYPEWRITER CURSOR BLINK --- */
+@keyframes blinkCursor {
+  from, to { border-color: transparent }
+  50% { border-color: #0056b3; }
+}
+
+/* Switches cursor to neon blue when dark mode is toggled */
+.dark-mode-active .typing-text-container {
+  animation-color: #4da3ff !important;
+}
+
+.typing-text-container {
+  display: inline-block;
+  padding-right: 4px;
+  border-right: 3px solid;
+  animation: blinkCursor 0.8s step-end infinite;
 }

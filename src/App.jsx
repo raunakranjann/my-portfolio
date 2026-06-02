@@ -1,122 +1,56 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { useState } from 'react';
+import './index.css'; // Global styles and dark mode classes
+import Navbar from './components/Navbar'; 
+import Hero from './components/Hero';
+import Skills from './components/Skills';
+import Experience from './components/Experience';
+import Projects from './components/Projects';
+import Certificates from './components/Certificates';
+import Contact from './components/Contact';
+import Education from './components/Education';
+import GithubActivity from './components/GithubActivity';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const appStyles = {
+    backgroundColor: isDarkMode ? '#121212' : '#ffffff',
+    color: isDarkMode ? '#ffffff' : '#333333',
+    minHeight: '100vh',
+    padding: '20px 0', // Changed padding slightly for full-bleed background transitions
+    fontFamily: 'sans-serif',
+    transition: 'all 0.3s ease',
+    position: 'relative',
+    overflowX: 'hidden' // Prevents the floating blobs from creating horizontal scrollbars
+  };
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    // Added dark-mode-active class to let index.css know which theme is live
+    <div className={isDarkMode ? "dark-mode-active" : ""} style={appStyles}>
+      
+      {/* MODERN UI ACCENTS: Fixed floating lighting effects background layers */}
+      <div className="ambient-blob-1"></div>
+      <div className="ambient-blob-2"></div>
 
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+      {/* Main Container */}
+      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 20px" }}>
+        
+        {/* Navbar with embedded Dark Mode Toggle Switch */}
+        <Navbar isDarkMode={isDarkMode} toggleDarkMode={() => setIsDarkMode(!isDarkMode)} />
+        
+        {/* Main Content Sections with perfect prop pipeline routing */}
+        <Hero isDarkMode={isDarkMode} />
+        <Skills isDarkMode={isDarkMode} />
+        <Experience isDarkMode={isDarkMode} />
+        <Education isDarkMode={isDarkMode} />
+        <Projects isDarkMode={isDarkMode} />
+        <Certificates isDarkMode={isDarkMode} />
+        <GithubActivity isDarkMode={isDarkMode} />
+        <Contact isDarkMode={isDarkMode} />
+        
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;

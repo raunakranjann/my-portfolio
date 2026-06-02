@@ -1,16 +1,39 @@
-# React + Vite
+# DevPortfolio | Raunak Ranjan
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, high-performance developer portfolio designed to showcase software engineering milestones, full-stack competencies, and technical projects. Built using **React** and compiled natively with **Vite** for optimized build performance.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Key Features
 
-## React Compiler
+*   **Dynamic Dark Mode:** Single-state theme toggling integrated seamlessly right into the Navbar controls.
+*   **Looping Typewriter Hero:** Interactive terminal-style headline animation built with custom React streaming hooks.
+*   **Ambient Glassmorphism UI:** Premium card architectures accented by fixed glowing background layers and interactive hover lift physics.
+*   **Milestone Timeline:** Chronological data pipelines highlighting real-world software engineering internship and educational narratives.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+*   **Frontend:** React (Hooks & State Management)
+*   **Styling:** Native CSS3, Responsive Grid / Flexbox Layouts
+*   **Build Engine:** Vite
+
+---
+
+## 💻 Setup & Installation
+
+Follow these steps to run the portfolio workspace locally:
+
+```bash
+# 1. Clone the repository
+git clone [https://github.com/raunakranjann/my-portfolio.git](https://github.com/raunakranjann/my-portfolio.git)
+
+# 2. Navigate to the project directory
+cd my-portfolio
+
+# 3. Install project dependencies
+npm install
+
+# 4. Spin up the Vite development server
+npm run dev
