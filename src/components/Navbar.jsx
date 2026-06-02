@@ -53,9 +53,10 @@ export default function Navbar({ isDarkMode, toggleDarkMode }) {
 
   return (
     <nav id="navbar" style={navStyle}>
-      <div style={{ fontWeight: '900', fontSize: '1.2rem', color: isDarkMode ? '#4da3ff' : '#0056b3' }}>
-        DevPortfolio.
-      </div>
+    {/* Professional Name Branding */}
+<div style={{ fontWeight: '900', fontSize: '1.2rem', color: isDarkMode ? '#4da3ff' : '#0056b3', letterSpacing: '-0.5px' }}>
+  Raunak Ranjan
+</div>
       
       {/* --- DESKTOP NAVIGATION --- */}
       <div className="desktop-nav" style={{ display: 'flex', alignItems: 'center' }}>
