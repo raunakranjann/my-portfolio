@@ -1,4 +1,4 @@
-# DevPortfolio | Raunak Ranjan
+# Raunak Ranjan | Software Engineer
 
 A modern, high-performance developer portfolio designed to showcase software engineering milestones, full-stack competencies, and technical projects. Built using **React** and compiled natively with **Vite** for optimized build performance.
 
