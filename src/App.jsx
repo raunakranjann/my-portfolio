@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // ADDED ROUTER
 import './index.css'; // Global styles and dark mode classes
 import Navbar from './components/Navbar'; 
 import Hero from './components/Hero';
@@ -26,31 +27,42 @@ function App() {
   };
 
   return (
-    // Added dark-mode-active class to let index.css know which theme is live
-    <div className={isDarkMode ? "dark-mode-active" : ""} style={appStyles}>
-      
-      {/* MODERN UI ACCENTS: Fixed floating lighting effects background layers */}
-      <div className="ambient-blob-1"></div>
-      <div className="ambient-blob-2"></div>
+    <Router>
+      {/* Added dark-mode-active class to let index.css know which theme is live */}
+      <div className={isDarkMode ? "dark-mode-active" : ""} style={appStyles}>
+        
+        {/* MODERN UI ACCENTS: Fixed floating lighting effects background layers */}
+        <div className="ambient-blob-1"></div>
+        <div className="ambient-blob-2"></div>
 
-      {/* Main Container */}
-      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 20px" }}>
-        
-        {/* Navbar with embedded Dark Mode Toggle Switch */}
-        <Navbar isDarkMode={isDarkMode} toggleDarkMode={() => setIsDarkMode(!isDarkMode)} />
-        
-        {/* Main Content Sections with perfect prop pipeline routing */}
-        <Hero isDarkMode={isDarkMode} />
-        <Skills isDarkMode={isDarkMode} />
-        <Experience isDarkMode={isDarkMode} />
-        <Education isDarkMode={isDarkMode} />
-        <Projects isDarkMode={isDarkMode} />
-        <Certificates isDarkMode={isDarkMode} />
-        <GithubActivity isDarkMode={isDarkMode} />
-        <Contact isDarkMode={isDarkMode} />
-        
+        {/* Main Container */}
+        <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 20px" }}>
+          
+          {/* Navbar stays outside Routes so it shows on every page! */}
+          <Navbar isDarkMode={isDarkMode} toggleDarkMode={() => setIsDarkMode(!isDarkMode)} />
+          
+          <Routes>
+            {/* ROUTE 1: Main Portfolio (Everything wrapped in a Fragment) */}
+            <Route path="/" element={
+              <>
+                <Hero isDarkMode={isDarkMode} />
+                <Skills isDarkMode={isDarkMode} />
+                <Experience isDarkMode={isDarkMode} />
+                <Education isDarkMode={isDarkMode} />
+                <Projects isDarkMode={isDarkMode} />
+                <Certificates isDarkMode={isDarkMode} />
+                <GithubActivity isDarkMode={isDarkMode} />
+                <Contact isDarkMode={isDarkMode} />
+              </>
+            } />
+
+            {/* ROUTE 2: Your App Deletion Link */}
+            <Route path="/algostreak-support" element={<AlgoStreakSupport />} />
+          </Routes>
+          
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 
