@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 export default function AlgoStreakSupport() {
   const [copied, setCopied] = useState(false);
-  const developerEmail = "your.email@example.com"; // Replace with your actual email
+  const developerEmail = "raunakranjann@gmail.com"; // Replace with your actual email
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(developerEmail);
