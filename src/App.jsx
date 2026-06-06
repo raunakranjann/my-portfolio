@@ -9,6 +9,7 @@ import Certificates from './components/Certificates';
 import Contact from './components/Contact';
 import Education from './components/Education';
 import GithubActivity from './components/GithubActivity';
+import AlgoStreakSupport from './components/AlgoStreakSupport'; 
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
