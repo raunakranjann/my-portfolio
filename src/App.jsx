@@ -12,6 +12,11 @@ import Education from './components/Education';
 import GithubActivity from './components/GithubActivity';
 import AlgoStreakSupport from './components/AlgoStreakSupport'; 
 import AlgoStreakDeveloper from './components/AlgoStreakDeveloper';
+import AlgoStreakDisclaimer from './components/AlgoStreakDisclaimer';
+import AlgoStreakTerms from './components/AlgoStreakTerms';
+import AlgoStreakPrivacy from './components/AlgoStreakPrivacy';
+
+
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -65,6 +70,16 @@ function App() {
 
         {/* ROUTE 3: The New Developer Page! */}
         <Route path="/algostreak-developer" element={<AlgoStreakDeveloper />} />
+    
+        {/* ROUTE 4: Disclaimer Page */}
+        <Route path="/algostreak-disclaimer" element={<AlgoStreakDisclaimer />} />
+
+        {/* ROUTE 5: Terms and Conditions Page */}
+        <Route path="/algostreak-terms" element={<AlgoStreakTerms />} />
+
+        {/* ROUTE 6: Privacy Policy Page */}
+        <Route path="/algostreak-privacy" element={<AlgoStreakPrivacy />} />    
+    
       </Routes>
     </Router>
   );
