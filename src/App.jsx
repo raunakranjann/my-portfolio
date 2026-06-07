@@ -11,6 +11,7 @@ import Contact from './components/Contact';
 import Education from './components/Education';
 import GithubActivity from './components/GithubActivity';
 import AlgoStreakSupport from './components/AlgoStreakSupport'; 
+import AlgoStreakDeveloper from './components/AlgoStreakDeveloper';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -61,6 +62,9 @@ function App() {
 
         {/* ROUTE 2: App Deletion Link (Shows ONLY the Support Card) */}
         <Route path="/algostreak-support" element={<AlgoStreakSupport />} />
+
+        {/* ROUTE 3: The New Developer Page! */}
+        <Route path="/algostreak-developer" element={<AlgoStreakDeveloper />} />
       </Routes>
     </Router>
   );
