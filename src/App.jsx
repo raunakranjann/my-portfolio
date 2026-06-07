@@ -1,20 +1,20 @@
 import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css'; 
-import Navbar from './components/Navbar'; 
-import Hero from './components/Hero';
-import Skills from './components/Skills';
-import Experience from './components/Experience';
-import Projects from './components/Projects';
-import Certificates from './components/Certificates';
-import Contact from './components/Contact';
-import Education from './components/Education';
-import GithubActivity from './components/GithubActivity';
-import AlgoStreakSupport from './components/AlgoStreakSupport'; 
-import AlgoStreakDeveloper from './components/AlgoStreakDeveloper';
-import AlgoStreakDisclaimer from './components/AlgoStreakDisclaimer';
-import AlgoStreakTerms from './components/AlgoStreakTerms';
-import AlgoStreakPrivacy from './components/AlgoStreakPrivacy';
+import Navbar from './components/portfolio/Navbar'; 
+import Hero from './components/portfolio/Hero';
+import Skills from './components/portfolio/Skills';
+import Experience from './components/portfolio/Experience';
+import Projects from './components/portfolio/Projects';
+import Certificates from './components/portfolio/Certificates';
+import Contact from './components/portfolio/Contact';
+import Education from './components/portfolio/Education';
+import GithubActivity from './components/portfolio/GithubActivity';
+import AlgoStreakSupport from './components/algostreak/AlgoStreakSupport'; 
+import AlgoStreakDeveloper from './components/algostreak/AlgoStreakDeveloper';
+import AlgoStreakDisclaimer from './components/algostreak/AlgoStreakDisclaimer';
+import AlgoStreakTerms from './components/algostreak/AlgoStreakTerms';
+import AlgoStreakPrivacy from './components/algostreak/AlgoStreakPrivacy';
 
 
 
