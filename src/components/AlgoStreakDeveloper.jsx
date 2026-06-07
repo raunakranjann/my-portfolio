@@ -12,7 +12,7 @@ const AlgoStreakDeveloper = () => {
         
         {/* Header Info */}
         <h1 style={styles.name}>Raunak Ranjan</h1>
-        <p style={styles.title}>Android Developer & Creator of AlgoStreak</p>
+        <p style={styles.title}>Software Engineer & Creator of AlgoStreak</p>
         
         <div style={styles.divider}></div>
         
@@ -25,10 +25,10 @@ const AlgoStreakDeveloper = () => {
         
         {/* Professional Links (Update these with your actual links!) */}
         <div style={styles.linkContainer}>
-          <a href="https://github.com/your-github-username" target="_blank" rel="noreferrer" style={styles.primaryButton}>
+          <a href="https://github.com/raunakranjann" target="_blank" rel="noreferrer" style={styles.primaryButton}>
             View My GitHub
           </a>
-          <a href="https://linkedin.com/in/your-linkedin-username" target="_blank" rel="noreferrer" style={styles.secondaryButton}>
+          <a href="https://linkedin.com/in/rawnac" target="_blank" rel="noreferrer" style={styles.secondaryButton}>
             Connect on LinkedIn
           </a>
         </div>
