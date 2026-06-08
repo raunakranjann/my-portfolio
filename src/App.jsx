@@ -10,13 +10,6 @@ import Certificates from './components/portfolio/Certificates';
 import Contact from './components/portfolio/Contact';
 import Education from './components/portfolio/Education';
 import GithubActivity from './components/portfolio/GithubActivity';
-import AlgoStreakSupport from './components/algostreak/AlgoStreakSupport'; 
-import AlgoStreakDeveloper from './components/algostreak/AlgoStreakDeveloper';
-import AlgoStreakDisclaimer from './components/algostreak/AlgoStreakDisclaimer';
-import AlgoStreakTerms from './components/algostreak/AlgoStreakTerms';
-import AlgoStreakPrivacy from './components/algostreak/AlgoStreakPrivacy';
-
-
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -62,24 +55,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* ROUTE 1: Main Portfolio (Shows Navbar, Blobs, and All Sections) */}
+        {/* Main Portfolio Layout */}
         <Route path="/" element={portfolioContent} />
-
-        {/* ROUTE 2: App Deletion Link (Shows ONLY the Support Card) */}
-        <Route path="/algostreak-support" element={<AlgoStreakSupport />} />
-
-        {/* ROUTE 3: The New Developer Page! */}
-        <Route path="/algostreak-developer" element={<AlgoStreakDeveloper />} />
-    
-        {/* ROUTE 4: Disclaimer Page */}
-        <Route path="/algostreak-disclaimer" element={<AlgoStreakDisclaimer />} />
-
-        {/* ROUTE 5: Terms and Conditions Page */}
-        <Route path="/algostreak-terms" element={<AlgoStreakTerms />} />
-
-        {/* ROUTE 6: Privacy Policy Page */}
-        <Route path="/algostreak-privacy" element={<AlgoStreakPrivacy />} />    
-    
       </Routes>
     </Router>
   );
