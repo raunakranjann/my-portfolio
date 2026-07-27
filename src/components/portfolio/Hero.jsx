@@ -59,16 +59,23 @@ export default function Hero({ isDarkMode }) {
         I am a Computer Science Engineering graduate and hackathon finalist with a proven track record of solving complex technical problems. I specialize in engineering robust, end-to-end web applications using Java, Spring Boot, and PostgreSQL. Welcome to my portfolio!
       </p>
       
-      <a 
-        href="/resume.pdf" download="Raunak_Ranjan_Resume.pdf"
-        style={{
-          display: "inline-block", padding: "12px 24px", backgroundColor: "#0056b3",
-          color: "white", textDecoration: "none", borderRadius: "6px", fontWeight: "bold",
-          boxShadow: "0 4px 6px rgba(0,0,0,0.1)"
-        }}
-      >
-        Download Resume
-      </a>
+     <a 
+  href="https://drive.google.com/file/d/10ESLO7uCbtWS8ZnJCQsfHPCUguSBkWUw/view?usp=sharing" 
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{
+    display: "inline-block", 
+    padding: "12px 24px", 
+    backgroundColor: "#0056b3",
+    color: "white", 
+    textDecoration: "none", 
+    borderRadius: "6px", 
+    fontWeight: "bold",
+    boxShadow: "0 4px 6px rgba(0,0,0,0.1)"
+  }}
+>
+  Request Resume
+</a>
     </section>
   );
 }
