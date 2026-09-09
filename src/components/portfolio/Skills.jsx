@@ -1,34 +1,38 @@
 export default function Skills({ isDarkMode }) {
-  // Ordered progressively from foundational/accessible tools (Easy) to enterprise systems architecture (Hard)
+  // Ordered progressively from foundational data/scripting skills to advanced enterprise systems architecture
   const mySkills = [
-    // 1. Presentation & Styling (Easy)
+    // 1. Foundational Data & Scripting (Easy)
+    "MS Excel",
     "HTML & CSS", 
-    "TailwindCSS", 
+    "TailwindCSS",
     
-    // 2. Fundamental Workflow & Scripting (Easy-Medium)
-    "Postman", 
-    "Git & GitHub", 
-    "Python", 
+    // 2. Fundamental Workflow & Analytics (Easy-Medium)
+    "Python",
+    "Git & GitHub",
+    "Postman",
     
-    // 3. Frontend Architecture (Medium)
-    "JavaScript", 
-    "React", 
+    // 3. Frontend & Web Development (Medium)
+    "JavaScript",
+    "React",
     
-    // 4. Component Bridges & Build Ecosystems (Medium)
-    "Thymeleaf", 
-    "REST APIs", 
-    "Maven", 
+    // 4. Data Processing & Analytical Skills (Medium)
+    "Exploratory Data Analysis (EDA)",
+    "Statistical Analysis",
+    "REST APIs",
+    "Thymeleaf",
     
-    // 5. Core Development, Databases & Environments (Medium-Hard)
-    "SQLite", 
-    "Java", 
-    "PostgreSQL", 
-    "Linux Environment", 
+    // 5. Backend Engineering & Databases (Medium-Hard)
+    "Java",
+    "Spring Boot",
+    "Advanced SQL",
+    "PostgreSQL",
+    "SQLite",
+    "Linux Environment",
     
-    // 6. Systems Engineering & Complex Paradigms (Hard)
-    "Docker", 
-    "C/C++", 
-    "Spring Boot"
+    // 6. Systems Architecture & DevOps (Hard)
+    "Data Warehousing",
+    "Docker",
+    "Maven"
   ];
 
   return (
