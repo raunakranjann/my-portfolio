@@ -1,44 +1,52 @@
 export default function Projects({ isDarkMode }) {
   const myProjects = [
     
-    {
+  {
     id: 1,
+    title: "StudyPad: Pentab-Optimized Digital Whiteboard",
+    techStack: "React.js, Vite, Tailwind CSS, HTML5 Canvas, Vercel",
+    description: "Developed a custom multi-page digital whiteboard optimized for pen tablets, featuring responsive vector drawing, multi-page state management with base64 storage, dynamic background themes, fullscreen mode, and direct PNG exporting.",
+    github: "https://github.com/raunakranjann/studypad",
+    demo: "https://mystudypad.vercel.app"
+  },
+  {
+    id: 2,
     title: "CloudPad: Secure Full-Stack Application",
     techStack: "React.js, Java Spring Boot, PostgreSQL (Neon), JWT, Docker, Vercel",
     description: "Engineered a production-grade cloud application with end-to-end stateless JWT security and Role-Based Access Control (RBAC). Containerized the backend and configured global CORS policies to securely connect an edge-hosted frontend to a serverless database.",
     github: "https://github.com/raunakranjann/cloud-notepad-frontend",
     demo: "https://my-cloud-notepad.vercel.app/login"
   },
-    {
-      id: 2,
-      title: "Academic Analytics and Archival System",
-      techStack: "Java 17, Spring Boot, Playwright, SQLite, Thymeleaf",
-      description: "A zero-dependency Linux application for automated academic data ingestion. Built a web-scraping engine to extract university portal data, secured by JWT, with a BI dashboard using Chart.js.",
-      github: "https://github.com/raunakranjann/Academic-Analytics_and_Archival-System" 
-    },
-    {
-      id: 3,
-      title: "PixelPatrol: UI Regression Testing Tool",
-      techStack: "Java 21, Spring Boot 3.5, SQLite, TailwindCSS, OpenPDF",
-      description: "Self-hosted automated UI testing application to detect visual anomalies between web environments using algorithmic image comparison and a Singleton browser engine.",
-      github: "https://github.com/raunakranjann/PixelPatrol"
-    },
-    {
-      id: 4,
-      title: "GCES Enterprise Data Sync Engine",
-      techStack: "Java, Spring Boot, REST APIs, JPA/Hibernate, Token Auth",
-      description: "Engineered a high-throughput integration engine for automated data synchronization across hierarchical administrative boundaries. Built dependent state verification systems mapping State, District, and Sub-District branches down to individual LGD-coded villages.",
-      caption: "Developed during internship at Amnex Infotechnologies",
-      github: "https://github.com/raunakranjann/gcesapi"
-    },
-    {
-      id: 5,
-      title: "College ID Card Generator",
-      techStack: "HTML, CSS, JavaScript, HTML5 Canvas",
-      description: "An open-source web application developed for a college tech fest to generate and download customizable student ID cards.",
-      github: "https://github.com/siwanscem/siwanscem.github.io",
-      demo: "https://siwanscem.github.io" 
-    },
+  {
+    id: 3,
+    title: "Academic Analytics and Archival System",
+    techStack: "Java 17, Spring Boot, Playwright, SQLite, Thymeleaf",
+    description: "A zero-dependency Linux application for automated academic data ingestion. Built a web-scraping engine to extract university portal data, secured by JWT, with a BI dashboard using Chart.js.",
+    github: "https://github.com/raunakranjann/Academic-Analytics_and_Archival-System" 
+  },
+  {
+    id: 4,
+    title: "PixelPatrol: UI Regression Testing Tool",
+    techStack: "Java 21, Spring Boot 3.5, SQLite, TailwindCSS, OpenPDF",
+    description: "Self-hosted automated UI testing application to detect visual anomalies between web environments using algorithmic image comparison and a Singleton browser engine.",
+    github: "https://github.com/raunakranjann/PixelPatrol"
+  },
+  {
+    id: 5,
+    title: "GCES Enterprise Data Sync Engine",
+    techStack: "Java, Spring Boot, REST APIs, JPA/Hibernate, Token Auth",
+    description: "Engineered a high-throughput integration engine for automated data synchronization across hierarchical administrative boundaries. Built dependent state verification systems mapping State, District, and Sub-District branches down to individual LGD-coded villages.",
+    caption: "Developed during internship at Amnex Infotechnologies",
+    github: "https://github.com/raunakranjann/gcesapi"
+  },
+  {
+    id: 6,
+    title: "College ID Card Generator",
+    techStack: "HTML, CSS, JavaScript, HTML5 Canvas",
+    description: "An open-source web application developed for a college tech fest to generate and download customizable student ID cards.",
+    github: "https://github.com/siwanscem/siwanscem.github.io",
+    demo: "https://siwanscem.github.io" 
+  }
     // {
     //   id: 4,
     //   title: "Interactive CSS Keyboard",
